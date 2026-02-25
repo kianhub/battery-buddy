@@ -1,0 +1,71 @@
+{
+  "name": "raycast-battery-buddy",
+  "title": "Battery Buddy",
+  "description": "iPhone and Apple Watch battery in Raycast via libimobiledevice",
+  "icon": "icon.svg",
+  "version": "0.1.0",
+  "author": "kian",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "preferences": [
+    {
+      "name": "ideviceIdPath",
+      "type": "textfield",
+      "title": "idevice_id Path",
+      "description": "Optional absolute path override for idevice_id"
+    },
+    {
+      "name": "ideviceInfoPath",
+      "type": "textfield",
+      "title": "ideviceinfo Path",
+      "description": "Optional absolute path override for ideviceinfo"
+    },
+    {
+      "name": "watchHelperPath",
+      "type": "textfield",
+      "title": "Watch Helper Path",
+      "description": "Optional absolute path override for watch-helper binary"
+    },
+    {
+      "name": "enableNetworkScan",
+      "type": "checkbox",
+      "title": "Enable Network Scan",
+      "description": "Include Wi-Fi paired iPhones via idevice_id -n",
+      "default": true
+    },
+    {
+      "name": "commandTimeoutMs",
+      "type": "textfield",
+      "title": "Command Timeout (ms)",
+      "description": "Timeout per tooling invocation in milliseconds",
+      "default": "5000"
+    }
+  ],
+  "commands": [
+    {
+      "name": "show-apple-batteries",
+      "title": "Show Apple Batteries",
+      "subtitle": "iPhone + Apple Watch",
+      "description": "Show iPhone and Apple Watch battery from local tooling",
+      "mode": "view"
+    }
+  ],
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint --relaxed",
+    "test": "tsc -p tsconfig.test.json && node --test dist/lib/parsers.test.js"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.104.6"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "typescript": "^5.9.3"
+  }
+}
