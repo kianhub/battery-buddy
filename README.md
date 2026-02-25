@@ -146,3 +146,6 @@ npm test
 ```bash
 npm run lint
 ```
+## Thanks
+
+This extension was inspired by the incredible work of [@lihaoyun6/AirBattery](https://github.com/lihaoyun6/AirBattery).
