@@ -18,6 +18,9 @@ When you run `Show Apple Batteries`:
 5. If needed, it compiles `watch-helper` locally from `assets/watch-helper.c`
 6. It queries Apple Watch battery through the paired iPhone
 
+### Screenshot
+<img width="886" height="586" alt="image" src="https://github.com/user-attachments/assets/bd0adb67-4d83-4a19-9f6e-0802291f01d8" />
+
 If watch helper setup fails, iPhone battery still works and a warning is shown.
 
 ## Requirements
